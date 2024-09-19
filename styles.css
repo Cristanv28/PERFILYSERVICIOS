@@ -1,0 +1,193 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contenedor Principal */
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Menú Lateral */
+.menu {
+    width: 250px;
+    background-color: #222;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+}
+
+.menu-item {
+    background-color: #333;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s;
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.menu-item:hover {
+    background-color: #6c63ff;
+    transform: scale(1.05);
+}
+
+.menu-item.selected {
+    background-color: #6c63ff;
+    color: #fff;
+    font-weight: bold;
+    animation: highlight 0.5s ease-in-out;
+}
+
+@keyframes highlight {
+    from {
+        background-color: #6c63ff;
+    }
+    to {
+        background-color: #4a4a4a;
+    }
+}
+
+/* Contenido Principal */
+.main-content {
+    margin-left: 270px;
+    width: calc(100% - 270px);
+    padding: 20px;
+}
+
+/* Título Principal */
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    color: #6c63ff;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Sección de Perfil */
+.profile-info {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: #444;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 100;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.profile-box {
+    text-align: center;
+}
+
+.profile-box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.profile-box p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+/* Formulario de Inicio de Sesión */
+#login-container {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#login-form input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #666;
+    background-color: #333;
+    color: #fff;
+}
+
+#login-form button {
+    background-color: #6c63ff;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+}
+
+#login-form button:hover {
+    background-color: #5a54e8;
+}
+
+/* Mensaje de Bienvenida */
+#welcome-message {
+    text-align: center;
+}
+
+#welcome-text {
+    color: #6c63ff;
+    font-size: 2em;
+}
+
+/* Mensaje de Error */
+#error-message {
+    color: red;
+    font-size: 1em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+

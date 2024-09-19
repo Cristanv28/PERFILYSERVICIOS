@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil y Servicios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Contenedor Principal -->
+    <div class="container">
+        <!-- Menú Lateral -->
+        <div id="menu" class="menu">
+            <div class="menu-item" id="inicio-menu">Inicio</div>
+            <div class="menu-item" id="contactos-menu">Contactos</div>
+            <div class="menu-item" id="servicios-menu">Servicios</div>
+        </div>
+
+        <!-- Contenedor Principal de Contenidos -->
+        <div class="main-content">
+            <!-- Título Principal -->
+            <header class="header">
+                <h1>Bienvenido a Nuestro Servicio</h1>
+            </header>
+
+            <!-- Sección de Perfil -->
+            <div id="profile-info" class="profile-info hidden">
+                <div class="profile-box">
+                    <img id="profile-pic" src="default-profile-pic.jpg" alt="Foto de Perfil">
+                    <p id="username">Nombre de Usuario</p>
+                </div>
+            </div>
+
+            <!-- Sección de Inicio de Sesión -->
+            <div id="login-container">
+                <h2>Iniciar Sesión</h2>
+                <form id="login-form">
+                    <input type="text" id="login-username" placeholder="Nombre de Usuario" required>
+                    <input type="email" id="login-email" placeholder="Correo Electrónico" required>
+                    <input type="password" id="login-password" placeholder="Contraseña" required>
+                    <button type="submit">Iniciar Sesión</button>
+                </form>
+                <p id="error-message" class="hidden">Credenciales inválidas, intente nuevamente.</p>
+            </div>
+
+            <!-- Mensaje de Bienvenida -->
+            <div id="welcome-message" class="hidden">
+                <h2 id="welcome-text">¡Bienvenido!</h2>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
